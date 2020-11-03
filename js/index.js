@@ -9,12 +9,14 @@ $(document).ready(function(){
             method:'GET',
             url:url+"&t="+movie,
             success:function(data){
-//                 console.log(data)
+                console.log(data)
                 result = `
                 <div class="container">
                   <div class="cellphone-container">    
                   <div class="movie">       
-                  <div><img class="movie-img" src="${data.Poster}"></div>
+                  <div>
+                  <a href="https://imdb.com/title/${data.imdbID}" target="_blank"><img class="movie-img" src="${data.Poster}"><i class="far fa-play-circle"></i></img></a>
+                  </div>
                   <div class="text-movie-cont">
                     <div class="mr-grid">
                       <div class="col1">
@@ -47,7 +49,7 @@ $(document).ready(function(){
                       </div>
                       <div class="mr-grid action-row">
                             <div class="col2 mt-3"><div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:${data.Ratings[1].Value}" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width:${data.Metascore +'%'}" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
                           </div></div>
                             <div class="col6 action-btn"></div>
                             <div class="col6 action-btn"><i class="rating">${data.imdbRating}</i></div>
