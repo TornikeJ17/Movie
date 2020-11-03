@@ -239,3 +239,9 @@ img:hover{
 .rating{
   font-size: 1.7rem !important;
 }
+.fa-play-circle{
+    position: absolute;
+    top: 8rem;
+    font-size: 4rem;
+    left: 10rem;
+}
