@@ -4,12 +4,12 @@ $(document).ready(function(){
         event.preventDefault()
         var movie = $('#movie').val()
         var result = ''
-        var url = "http://www.omdbapi.com/?apikey="+apikey
+        var url = "https://www.omdbapi.com/?apikey="+apikey
         $.ajax({
             method:'GET',
             url:url+"&t="+movie,
             success:function(data){
-                console.log(data)
+//                 console.log(data)
                 result = `
                 <div class="container">
                   <div class="cellphone-container">    
